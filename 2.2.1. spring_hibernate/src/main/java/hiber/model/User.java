@@ -19,7 +19,7 @@ public class User {
     @Column(name = "email")
     private String email;
 
-    @OneToOne(mappedBy="user",cascade=CascadeType.ALL)
+    @OneToOne (cascade = CascadeType.ALL)
     private Car car;
 
     public Car getCar() {
@@ -28,7 +28,6 @@ public class User {
 
     public void setCar(Car car) {
         this.car = car;
-        car.setUser(this);
             }
 
     public User() {
@@ -39,7 +38,6 @@ public class User {
         this.lastName = lastName;
         this.email = email;
     }
-
 
     public Long getId() {
         return id;

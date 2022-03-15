@@ -16,9 +16,6 @@ public class Car {
     @Column
     private int series;
 
-    @OneToOne
-    private User user;
-
     public Car() {
     }
 
@@ -27,16 +24,9 @@ public class Car {
         this.series = series;
     }
 
+
     public int getSeries() {
         return series;
-    }
-
-    public User getUser() {
-        return user;
-    }
-
-    public void setUser(User user) {
-        this.user = user;
     }
 
     public void setSeries(int series) {
