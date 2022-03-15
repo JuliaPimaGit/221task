@@ -7,6 +7,7 @@ import javax.persistence.*;
 public class Car {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
     @Column
@@ -16,8 +17,6 @@ public class Car {
     private int series;
 
     @OneToOne
-    @MapsId
-    @JoinColumn(name="id")
     private User user;
 
     public Car() {
